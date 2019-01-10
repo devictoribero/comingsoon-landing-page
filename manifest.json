@@ -1,0 +1,9 @@
+{
+  "short_name": "SaaSFormation",
+  "name": "SaaSFormation",
+  "start_url": "index.html?launcher=true",
+  "display": "standalone",
+
+  "theme_color": "#0083ff",
+  "background_color": "#0083ff"
+}
