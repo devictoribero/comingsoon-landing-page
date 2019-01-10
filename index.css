@@ -97,6 +97,7 @@ body {
   letter-spacing: 0.5px;
   font-family: var(--font-family-primary);
   color: var(--grey-700);
+  transition: border-color 0.15s cubic-bezier(0.42, 0, 0, 0.39);
 }
 .Subscribe-email:focus {
   outline: none;
