@@ -3,7 +3,7 @@
   "name": "SaaSFormation",
   "start_url": "index.html?launcher=true",
   "display": "standalone",
-  "orientation": "portait",
+  "orientation": "portrait",
   "theme_color": "#0083ff",
   "background_color": "#0083ff",
   "icons": [
