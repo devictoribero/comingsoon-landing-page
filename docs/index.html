@@ -8,7 +8,7 @@
       name="Description"
       content="We help you to have your ideal product with a micro-service architecture based so your apps can scale easily. All API oriented."
     />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="./manifest.json" />
 
     <title>
       SasSFormation - Building micro-service oriented your next project
@@ -62,5 +62,11 @@
         <span class="Subscribe-sent hide">The email has been sent</span>
       </form>
     </div>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service_worker.js");
+      }
+    </script>
   </body>
 </html>
