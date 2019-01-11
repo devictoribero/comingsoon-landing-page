@@ -90,7 +90,7 @@ body {
   align-items: stretch;
 }
 .Subscribe-email {
-  background: white;
+  background: var(--grey-100);
   border: 1px solid var(--grey-100);
   margin: 0 auto;
   padding: 10px 20px;
@@ -107,7 +107,6 @@ body {
 }
 .Subscribe-email:focus {
   outline: none;
-  background: var(--grey-100);
 }
 .Subscribe-submit {
   display: flex;
@@ -188,7 +187,6 @@ body {
   line-height: 1.75;
 }
 
-/* From iphone 6*/
 @media screen and (min-width: 350px) {
   .Header {
     min-height: 350px;
