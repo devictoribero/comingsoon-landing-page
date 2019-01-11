@@ -237,4 +237,10 @@ body {
   .Card {
     max-width: 500px;
   }
+  .Card-title {
+    font-size: 21px;
+  }
+  .Subscribe-email {
+    font-size: 18px;
+  }
 }
