@@ -39,20 +39,20 @@
 
     <div class="Card">
       <h2 class="Card-title">Do you want to be informed?</h2>
-      <form class="Card-content Subscribe">
+      <form id="Subscribe" class="Card-content Subscribe">
         <div class="Subscribe-form">
           <label for="Subscribe-email" class="hide">Email</label>
           <input
             id="Subscribe-email"
             name="Subscribe-email"
             class="Subscribe-email"
-            type="email"
+            type="text"
             placeholder="victor@mundosgm.com"
-            required
             aria-required="true"
           />
           <button
             type="submit"
+            id="Subscribe-submit"
             class="Subscribe-submit"
             aria-label="Send email"
           >
@@ -78,8 +78,16 @@
 
     <script>
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("service_worker.js");
+        navigator.serviceWorker
+          .register("service_worker.js")
+          .then(function(registration) {
+            console.log("Services worked registered successfully! :)");
+          })
+          .catch(function(err) {
+            console.log("ServiceWorker registration failed: ", err);
+          });
       }
     </script>
+    <script src="./newsletter.js"></script>
   </body>
 </html>
