@@ -14,11 +14,17 @@
   --grey-300: hsl(0, 0%, 81%);
   --grey-200: hsl(0, 0%, 88%);
   --grey-100: hsl(0, 0%, 97%);
+
+  --accent-red-700: #af0900;
 }
 body {
   margin: 0;
   background: var(--grey-100);
   min-height: 100vh;
+}
+
+.hide {
+  display: none;
 }
 
 .Gradient {
@@ -61,7 +67,7 @@ body {
   border-radius: 3px;
   box-shadow: 0 2px 22px -1px rgba(1, 1, 1, 0.15);
   margin: -50px auto 0 auto;
-  padding: 32px 16px;
+  padding: 32px 21px;
   width: 85%;
   max-width: 400px;
 }
@@ -89,12 +95,14 @@ body {
   margin: 0 auto;
   padding: 10px 20px;
   width: 100%;
+  min-height: 50px;
   box-sizing: border-box;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   letter-spacing: 0.5px;
   font-family: var(--font-family-primary);
   color: var(--grey-700);
+
   transition: background-color 0.15s cubic-bezier(0.42, 0, 0, 0.39);
 }
 .Subscribe-email:focus {
@@ -116,7 +124,8 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
-.Subscribe-submit svg {
+.Subscribe-submitIcon,
+.Subscribe-submitIcon path {
   fill: white;
   width: 20px;
   height: 20px;
@@ -127,17 +136,56 @@ body {
 .Subscribe-submit:focus {
   border: 1px solid var(--grey-100);
 }
-.Subscribe-sent {
+.Subscribe-error {
   display: block;
-  color: var(--primary-500);
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
   margin-top: 8px;
+  font-size: 12px;
+  text-align: center;
+  font-family: var(--font-family-secondary);
+  color: var(--accent-red-700);
+  letter-spacing: 0.5px;
+
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.Subscribe-sent {
+  color: var(--primary-500);
+}
+
+/* Confirmation of the subscription */
+.SubscriptionConfirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SubscriptionConfirmation-icon {
+  margin-right: 16px;
+}
+.SubscriptionConfirmation-icon,
+.SubscriptionConfirmation-icon path {
+  fill: var(--primary-500);
+  width: 100px;
+  flex-basis: 100px;
+}
+.SubscriptionConfirmation-message {
   font-family: var(--font-family-primary);
 }
-.hide {
-  display: none !important;
+.SubscriptionConfirmation-title,
+.SubscriptionConfirmation-text {
+  color: var(--grey-900);
+}
+
+.SubscriptionConfirmation-title {
+  margin: 0 0 8px 0;
+  font-family: var(--font-family-secondary);
+  font-size: 16px;
+  line-height: 1.15;
+}
+.SubscriptionConfirmation-text {
+  display: block;
+  font-family: var(--font-family-primary);
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 /* From iphone 6*/
@@ -149,6 +197,7 @@ body {
   .Card {
     width: 75%;
     margin: -75px auto 0 auto;
+    padding: 32px 27px;
   }
 }
 
@@ -171,7 +220,7 @@ body {
   .Card {
     width: 75%;
     margin: -75px auto 0 auto;
-    padding: 50px 32px;
+    padding: 50px;
   }
   .Card-title {
     font-size: 18px;
