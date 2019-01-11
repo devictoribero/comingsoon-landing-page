@@ -14,8 +14,8 @@
     <title>
       SasSFormation - Building micro-service oriented your next project
     </title>
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="./typography.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/typography.css" />
   </head>
   <body>
     <header class="Header Gradient">
@@ -68,7 +68,7 @@
     <script>
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker
-          .register("service_worker.js")
+          .register("./assets/js/service_worker.js")
           .then(function(registration) {
             console.log("Services worked registered successfully! :)");
           })
@@ -77,6 +77,6 @@
           });
       }
     </script>
-    <script async src="./newsletter.js"></script>
+    <script async src="./assets/js/newsletter.js"></script>
   </body>
 </html>
