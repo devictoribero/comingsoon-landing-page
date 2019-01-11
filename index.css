@@ -5,7 +5,6 @@
   --primary-900: #005db6;
   --primary-700: #0b78df;
   --primary-500: #0083ff;
-  --primary-300: hsl(126, 49%, 84%);
   --primary-100: hsl(125, 65%, 93%);
 
   --grey-900: hsl(0, 0%, 23%);
@@ -96,26 +95,37 @@ body {
   letter-spacing: 0.5px;
   font-family: var(--font-family-primary);
   color: var(--grey-700);
-  transition: border-color 0.15s cubic-bezier(0.42, 0, 0, 0.39);
+  transition: background-color 0.15s cubic-bezier(0.42, 0, 0, 0.39);
 }
 .Subscribe-email:focus {
   outline: none;
-  border-color: var(--primary-500);
+  background: var(--grey-100);
 }
 .Subscribe-submit {
+  display: flex;
+  justify-content: center;
+  width: 100px;
   background: var(--primary-500);
   border: none;
   padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
   color: white;
-  width: 100px;
+  border: 1px solid var(--primary-500);
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+.Subscribe-submit svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
 }
 .Subscribe-submit:hover {
-  background: var(--primary-900);
+  background: var(--primary-700);
+}
+.Subscribe-submit:focus {
+  border: 1px solid var(--grey-100);
 }
 .Subscribe-sent {
   display: block;
@@ -161,7 +171,7 @@ body {
   .Card {
     width: 75%;
     margin: -75px auto 0 auto;
-    padding: 40px 32px;
+    padding: 50px 32px;
   }
   .Card-title {
     font-size: 18px;
