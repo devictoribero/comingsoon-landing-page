@@ -19,13 +19,6 @@
       href="https://fonts.googleapis.com/css?family=Domine:400,700|Open+Sans|Source+Sans+Pro:300"
       rel="stylesheet"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous"
-    />
   </head>
   <body>
     <header class="Header Gradient">
@@ -37,7 +30,7 @@
       </p>
     </header>
 
-    <div class="Card">
+    <div class="Card Subscription">
       <h2 class="Card-title">Do you want to be informed?</h2>
       <form id="Subscribe" class="Card-content Subscribe">
         <div class="Subscribe-form">
@@ -60,7 +53,7 @@
               aria-hidden="true"
               data-prefix="fas"
               data-icon="envelope"
-              class="svg-inline--fa fa-envelope fa-w-16"
+              class="Subscribe-submitIcon svg-inline--fa fa-envelope fa-w-16"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -71,8 +64,7 @@
             </svg>
           </button>
         </div>
-
-        <span class="Subscribe-sent hide">The email has been sent</span>
+        <span class="Subscribe-error"></span>
       </form>
     </div>
 
