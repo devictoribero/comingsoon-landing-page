@@ -3,6 +3,8 @@
   const subscribeForm = document.getElementById('Subscribe');
   const errorPlaceholder = document.getElementsByClassName('Subscribe-error')[0];
   const storeEmailEndpoint = 'http://www.google.com';
+  const sEmailIsNotValid = 'The email is not valid';
+  const sErrorMessage = 'Something went wrong. Try it later please';
   
   // This event listener is triggers each time a user presses a key when the input is focused
   inputEmail.addEventListener('keypress', function(e) {
@@ -39,7 +41,7 @@
   }
 
   function shoWrongEmailFormatMessage() {
-    errorPlaceholder.innerHTML = 'The email is not valid';
+    errorPlaceholder.innerHTML = sEmailIsNotValid;
   }
 
   function registerEmailToNewsletter(email) {
@@ -70,7 +72,7 @@
   }
 
   function showGeneralError() {
-    errorPlaceholder.innerHTML = 'Something went wrong. Try it later please';
+    errorPlaceholder.innerHTML = sErrorMessage;
   }
 
   function getSubscriptionConfirmationHtml(email) {
