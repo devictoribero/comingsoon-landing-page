@@ -16,9 +16,9 @@ It helps them to have a page instantly just forking the project or taking the so
 I've wanted to build a fast page with a beautiful design so the user could have a good user experience.
 I know there is room for improvement, but this is quite good for a first iteration as we can see.
 
-![](http://url/to/img.png)
+![]("./docs/lighthouse.png")
 
-## 🎨 How to customize
+## 👩🏽‍🎨 How to customize
 
 There are a few thinks to customize:
 
@@ -27,7 +27,7 @@ There are a few thinks to customize:
 - Manifest.json (for PWA)
 - Where to send the email you want to store
 
-### Color palette
+### 🎨 ‍‍Color palette
 
 I'm following the structure I use in all the projects:
 
@@ -104,12 +104,13 @@ Since in this project we just need a couple of colors, I've translated the palet
 }
 ```
 
-Where 100 is the lightest color and 900 is the darkest. It provides you the oportunity to add as much specification as you prefer.
+Where 100 is the lightest color and 900 is the darkest. It provides you the opportunity to add as much specification as you prefer.
 You can or select:
 
-- `300`,`500`and `700`
-- `100`, `300`,`500`,`700`,`900`
-- `100`,`200`, `300`,`400`,`500`,`600`,`700`,`800`,`900`
+- `300`, `500`, `700`
+- `100`, `300`, `500`, `700`, `900`
+- `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`
+
   Depending on how much detail you want.
 
 ### 🏞 Header Pattern
@@ -124,3 +125,31 @@ Remove the class `Gradient` from the `<Header>` element. Do not forget to remove
 
 For you information, I've used the https://www.heropatterns.com/ web application to generate my pattern because they look clean and awesome!
 HeroPatterns it's and intuitive web app which can generate you patterns with the colors and patterns you indicate. It generates the `css` and it's ready to be pasted into your `.css` file.
+
+### 📝 Manifest.json
+
+The `manifest.json` is a file which is used for _Progressive Web Applications_. Its a way to provide _metadata_ from the file.
+Remember to change the `short_name`, `name` and `colors`. If you need to include `icons` do it too!
+
+It has a format like:
+
+```
+{
+  "version": 1.0,
+  "manifest_version": 1.0,
+  "short_name": "CompanyName",
+  "name": "CompanyName",
+  "start_url": "index.html?launcher=true",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0083ff",
+  "background_color": "#0083ff",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}
+```

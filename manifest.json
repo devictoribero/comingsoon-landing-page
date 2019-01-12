@@ -1,4 +1,6 @@
 {
+  "version": 1.0,
+  "manifest_version": 1.0,
   "short_name": "SaaSFormation",
   "name": "SaaSFormation",
   "start_url": "index.html?launcher=true",
