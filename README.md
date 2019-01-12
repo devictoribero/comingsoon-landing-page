@@ -16,7 +16,7 @@ It helps them to have a page instantly just forking the project or taking the so
 I've wanted to build a fast page with a beautiful design so the user could have a good user experience.
 I know there is room for improvement, but this is quite good for a first iteration as we can see.
 
-![metrics]("https://github.com/tureey/comingsoon-landing-page/blob/master/docs/lighthouse.png")
+![Metrics by Lighthouse](https://github.com/tureey/comingsoon-landing-page/blob/master/docs/lighthouse.png)
 
 ## 👩🏽‍🎨 How to customize
 
