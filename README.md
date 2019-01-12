@@ -18,7 +18,7 @@ I know there is room for improvement, but this is quite good for a first iterati
 
 ![](http://url/to/img.png)
 
-## 🎨How to customize
+## 🎨 How to customize
 
 There are a few thinks to customize:
 
@@ -92,8 +92,8 @@ Since in this project we just need a couple of colors, I've translated the palet
   --font-family-primary: "Nunito", sans-serif;
   --font-family-secondary: "Domine", serif;
 
-  --primary-700: #0b78df;
-  --primary-500: #0083ff;
+  --primary-700: hsl(209, 91%, 46%);
+  --primary-500: hsl(209, 100%, 50%);
   --primary-100: hsl(125, 65%, 93%);
 
   --grey-900: hsl(0, 0%, 23%);
