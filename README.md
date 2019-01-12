@@ -159,4 +159,4 @@ It has a format like:
 
 If you have this page, It means you want to store somehow email to send information later on. To do so, you'll have to update where to send those.
 
-It's as easy as go to the `newsletter.js` file and update the variable `storeEmailEndpoint`.
+It's as easy as go to the `subscription.js` file and update the variable `storeEmailEndpoint`.
