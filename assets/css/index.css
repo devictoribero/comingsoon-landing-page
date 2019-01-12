@@ -2,17 +2,12 @@
   --font-family-primary: "Nunito", sans-serif;
   --font-family-secondary: "Domine", serif;
 
-  --primary-900: #005db6;
   --primary-700: #0b78df;
   --primary-500: #0083ff;
   --primary-100: hsl(125, 65%, 93%);
 
   --grey-900: hsl(0, 0%, 23%);
   --grey-700: hsl(0, 0%, 38%);
-  --grey-600: hsl(0, 0%, 49%);
-  --grey-500: hsl(0, 0%, 62%);
-  --grey-300: hsl(0, 0%, 81%);
-  --grey-200: hsl(0, 0%, 88%);
   --grey-100: hsl(0, 0%, 97%);
 
   --accent-red-700: #af0900;
