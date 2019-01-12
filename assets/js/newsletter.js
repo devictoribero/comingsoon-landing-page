@@ -2,22 +2,27 @@
   const inputEmail = document.getElementById('Subscribe-email');
   const subscribeForm = document.getElementById('Subscribe');
   const errorPlaceholder = document.getElementsByClassName('Subscribe-error')[0];
+  const storeEmailEndpoint = 'http://www.google.com';
   
+  // This event listener is triggers each time a user presses a key when the input is focused
+  inputEmail.addEventListener('keypress', function(e) {
+    if (!hasEmailFormat(e.target.value)) {
+      shoWrongEmailFormatMessage();
+    }
+  })
+
+  // When the user fires the submit of the form.
+  // It could be pressing enter or clicking the submit button
   subscribeForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
     if (!isValidEmail(inputEmail.value)) {
-      showErrorMessage();
+
+      shoWrongEmailFormatMessage();
       return;
     }
 
     registerEmailToNewsletter(inputEmail.value);
-  })
-
-  inputEmail.addEventListener('keypress', function(e) {
-    if (!hasEmailFormat(e.target.value)) {
-      showErrorMessage();
-    }
   })
 
   function isValidEmail(email) {
@@ -33,17 +38,27 @@
     return re.test(String(email).toLowerCase());
   }
 
-  function showErrorMessage() {
+  function shoWrongEmailFormatMessage() {
     errorPlaceholder.innerHTML = 'The email is not valid';
   }
 
   function registerEmailToNewsletter(email) {
-    showSubscriptionConfirmation(email)
-    /*
-    fetch('url').then(() => {
-      showSubscriptionConfirmation()
-    })
-    */
+   let _httpRequest = new XMLHttpRequest();
+   _httpRequest.onreadystatechange = function() {
+    if (_httpRequest.readyState == 4 && _httpRequest.status != 200) {
+      showGeneralError();
+    }
+  }
+   _httpRequest.addEventListener('load', onAjaxPetitionSuccess);
+   _httpRequest.open('POST', storeEmailEndpoint);
+
+   let jsonData = {email: email};
+   let formattedJsonData = JSON.stringify(jsonData);
+   _httpRequest.send(formattedJsonData);
+  }
+
+  function onAjaxPetitionSuccess () {
+    showSubscriptionConfirmation(email);
   }
 
   function showSubscriptionConfirmation(email) {
@@ -52,6 +67,10 @@
     _subscriptionCard.remove();
 
     document.body.innerHTML += _html;
+  }
+
+  function showGeneralError() {
+    errorPlaceholder.innerHTML = 'Something went wrong. Try it later please';
   }
 
   function getSubscriptionConfirmationHtml(email) {
