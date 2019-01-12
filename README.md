@@ -25,7 +25,7 @@ There are a few thinks to customize:
 - Color palette
 - Pattern of the header
 - Manifest.json (for PWA)
-- Where to send the email you want to store
+- (Not done yet) Where to send the email you want to store
 
 ### 🎨 ‍‍Color palette
 
@@ -40,7 +40,7 @@ const theme = {
       700: "hsl(122, 39%, 41%)", // hover, focus, selected effects
       500: "hsl(123, 35%, 51%)", // Buttons, Badges, borders...
       300: "hsl(126, 49%, 84%)",
-      100: "hsl(125, 65%, 93%)"
+      100: "hsl(125, 65%, 93%)", // Notifications/labels background
     },
     grey: {
       900: "hsl(0, 0%, 23%)", // Titles
@@ -49,22 +49,22 @@ const theme = {
       500: "hsl(0, 0%, 62%)", // Some details
       300: "hsl(0, 0%, 81%)", // Disabled button bg
       200: "hsl(0, 0%, 91%)", // Footers of modals, background of other sections...
-      100: "hsl(0, 0%, 97%)" // Background
+      100: "hsl(0, 0%, 97%)", // Background
     },
     accent: {
       red: {
         900: "hsl(360, 85%, 25%)",
-        700: "hsl(360, 67%, 44%)",
-        500: "hsl(360, 64%, 55%)",
+        700: "hsl(360, 67%, 44%)", // hover, focus, selected effects
+        500: "hsl(360, 64%, 55%)", // Buttons, Badges, borders...
         300: "hsl(360, 82%, 89%)",
-        100: "hsl(360, 100%, 97%)"
+        100: "hsl(360, 100%, 97%)" // Notifications/labels background
       },
       yellow: {
         900: "hsl(43, 77%, 27%)",
-        700: "hsl(43, 78%, 60%)",
-        500: "hsl(43, 89%, 70%)",
+        700: "hsl(43, 78%, 60%)", // hover, focus, selected effects
+        500: "hsl(43, 89%, 70%)", // Buttons, Badges, borders...
         300: "hsl(45, 90%, 88%)",
-        100: "hsl(45, 100%, 96%)"
+        100: "hsl(45, 100%, 96%)" // Notifications/labels background
       }
     },
     social: {
@@ -124,6 +124,7 @@ Remove the class `Gradient` from the `<Header>` element. Do not forget to remove
 #### 💁‍ Change Gradient
 
 For you information, I've used the https://www.heropatterns.com/ web application to generate my pattern because they look clean and awesome!
+
 HeroPatterns it's and intuitive web app which can generate you patterns with the colors and patterns you indicate. It generates the `css` and it's ready to be pasted into your `.css` file.
 
 ### 📝 Manifest.json
@@ -153,3 +154,9 @@ It has a format like:
   ]
 }
 ```
+
+### 📬 Where to send the email you want to store
+
+If you have this page, It means you want to store somehow email to send information later on. To do so, you'll have to update where to send those.
+
+It's as easy as go to the `newsletter.js` file and update the variable `storeEmailEndpoint`.
