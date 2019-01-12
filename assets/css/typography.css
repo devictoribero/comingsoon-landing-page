@@ -12,18 +12,3 @@
   font-weight: bold;
   display-font: fallback;
 }
-
-@font-face {
-  font-family: "OpenSans";
-  src: local("OpenSans"),
-    local("OpenSans Regular") url("../fonts/OpenSans-Regular.ttf");
-  font-weight: normal;
-  display-font: fallback;
-}
-
-@font-face {
-  font-family: "OpenSans";
-  src: local("OpenSans Italic"), url("../fonts/OpenSans-Italic.ttf");
-  font-style: italic;
-  display-font: fallback;
-}
