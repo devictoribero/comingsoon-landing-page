@@ -1,28 +1,36 @@
-# comingsoon-landing-page
+# Coming Soon / Newsletter
+
 A basic coming soon or subscribe to newsletter page with a resumé above the input to subscribe yourself.
 
-## For who is this page
+## 👥 For who is this page
+
 This page is made for those people who:
+
 - Want to create a blog or have their own newsletter.
 - Want to start a business or an idea and needs a comingsoon page.
 
 It helps them to have a page instantly just forking the project or taking the source code.
 
-## Metrics centric
+## 📈 Metrics centric
+
 I've wanted to build a fast page with a beautiful design so the user could have a good user experience.
 I know there is room for improvement, but this is quite good for a first iteration as we can see.
-[image here]
 
+![](http://url/to/img.png)
 
-## How to customize
+## 🎨How to customize
+
 There are a few thinks to customize:
+
 - Color palette
 - Pattern of the header
 - Manifest.json (for PWA)
 - Where to send the email you want to store
 
-## Color palette:
+### Color palette
+
 I'm following the structure I use in all the projects:
+
 ```
 const theme = {
   palette: {
@@ -78,6 +86,7 @@ const theme = {
 ```
 
 Since in this project we just need a couple of colors, I've translated the palette to this:
+
 ```
 :root {
   --font-family-primary: "Nunito", sans-serif;
@@ -94,9 +103,24 @@ Since in this project we just need a couple of colors, I've translated the palet
   --accent-red-700: #af0900;
 }
 ```
+
 Where 100 is the lightest color and 900 is the darkest. It provides you the oportunity to add as much specification as you prefer.
 You can or select:
+
 - `300`,`500`and `700`
 - `100`, `300`,`500`,`700`,`900`
 - `100`,`200`, `300`,`400`,`500`,`600`,`700`,`800`,`900`
-Depending on how much detail you want.
+  Depending on how much detail you want.
+
+### 🏞 Header Pattern
+
+I chose using a pattern as `background-image` because I did not wanted a simple linear-gradient. It would make look the site too simple.
+
+#### 🙅‍ Remove Gradient
+
+Remove the class `Gradient` from the `<Header>` element. Do not forget to remove the class specification from the `index.css`
+
+#### 💁‍ Change Gradient
+
+For you information, I've used the https://www.heropatterns.com/ web application to generate my pattern because they look clean and awesome!
+HeroPatterns it's and intuitive web app which can generate you patterns with the colors and patterns you indicate. It generates the `css` and it's ready to be pasted into your `.css` file.
